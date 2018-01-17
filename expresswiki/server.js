@@ -72,10 +72,9 @@ function edit(req, res, next) {
 
 // show login page
 function loginview(req, res, next) {
-      next("Can't login"); // error
-      //var page = req.params['page'] || 'main';
-      //var pages = pagelist();
-      //res.render('login.mustache', { 'pagename': page, 'pages': pages });
+      var page = req.params['page'] || 'main';
+      var pages = pagelist();
+      res.render('login.mustache', { 'pagename': page, 'pages': pages });
 }
 
 
